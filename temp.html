@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"
+          href="webstyle.css">
+ <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+      h2 {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+  font-color:white;
+      }
+h3{
+        font-family: 'Tangerine', serif;
+        font-size: 25px;
+        color:white;
+      }
+
+
+    </style>
+</head>
+<body style="background:url('http://wallpapercave.com/wp/xX2GRj6.gif')">
+
+<div>
+<ul>
+
+ <li><a href="solarsys.html">EXPLORESOLARSYSTEM</a></li>
+<li class="dropdown">
+<a href="#" class="dropbtn">TOOLS</a>
+    <div class="dropdown-content">
+      <a href="temp.html">TEMPERATURE CONVERTER</a>
+      <a href="light.html">KM TO LIGHT YEAR CONVERTER</a>
+      
+</li>
+ <li class="dropdown">
+<a href="#" class="dropbtn">RESEARCH</a>
+    <div class="dropdown-content">
+      <a href="research.html">HUBBLETELESCOPE</a>
+      <a href="research.html">ISS</a>
+      <a href="research.html">VOYAGER</a>
+<a href="research.html">SPUTNIK</a>
+</li>
+  
+  
+    
+  </li>
+<li class="dropdown">
+<a href="#" class="dropbtn">SATELLITES</a>
+    <div class="dropdown-content">
+      <a href="moon.html">MOON</a>
+      <a href="phobos.html">PHOBOS</a>
+      <a href="demoes.html">DEMOES</a>
+<a href="titan.html">TITAN</a>
+</li>
+<li class="dropdown">
+    <a href="#" class="dropbtn">PLANETS</a>
+    <div class="dropdown-content">
+      <a href="mercury.html">MERCURY</a>
+      <a href="venus.html">VENUS</a>
+      <a href="earth.html">EARTH</a>
+<a href="mars.html">MARS</a>
+<a href="jupiter.html">JUPITER</a>
+<a href="saturn.html">SATURN</a>
+<a href="uranus.html">URANUS</a>
+<a href="neptune.html">NEPTUNE</a>
+ <li><a href="sun.html">SUN</a></li>
+    <li><a href="milkyway.html">HOME</a></li>
+<li style="float:left"><a href="#home">WELCOME TO SPACE</a></li>
+</div>
+</ul>
+<br>
+
+<center><h2 style="color:white"> Celcius to Fahrenhet</h2>
+
+<h3>Insert a number into one of the input fields below:</h3>
+
+<h3><input id="c" onkeyup="convert('C')"> degrees Celsius</h3>
+
+<h3><input id="f" onkeyup="convert('F')"> degrees Fahrenheit</h3> </center>
+<script>
+function convert(degree) {
+    var x;
+    if (degree == "C") {
+        x = document.getElementById("c").value * 9 / 5 + 32;
+        document.getElementById("f").value = x;
+    } else {
+        x = (document.getElementById("f").value -32) * 5 / 9;
+        document.getElementById("c").value = x;
+    }
+}
+</script>
+</body>
+</html>
+

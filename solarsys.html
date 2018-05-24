@@ -1,0 +1,259 @@
+<html>
+<head>
+<style>
+
+.planet:after,.star:after {
+  content:"";
+ content-color:red;
+  position:absolute;
+  width:15px;
+  height:15px;
+  border-radius:500%;
+  transform-origin:center;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.planet,.star{
+  position:absolute;
+}
+#sun {
+  transform-origin:center center;
+  margin:auto;
+  top:0;
+  bottom:0px;
+  left:0;
+  right:0;​
+}
+#sun:after {
+content:"sun";
+  transform-origin:center center;
+  background: radial-gradient(circle, #FCFC14, #FF7700);
+  box-shadow: 0px 0px 80px #FF7700;
+  margin:auto;
+  width:70px;
+  height:70px;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+#mercury {
+  margin:auto;
+  top:0;
+  bottom:0px;
+  left:0;
+  right:0;
+  animation:planetMove 4s linear infinite;
+}
+#mercury:after {
+content:"mercury";
+  top:90px;
+  left:100px;
+  background: radial-gradient(circle, #E86E17, #BA5711);
+}
+.Orbit {
+  margin:auto;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+  border-left: 2px solid white;
+  border-top : 2px solid white;
+  border-right : 2px solid white;
+  border-bottom : 2px solid white;
+  border-radius: 50%;  
+      border-color:black;
+}
+#venus {
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  animation:planetMove 8s linear infinite;
+}
+#venus:after {
+  top:150px;
+  left:150px;
+content:"venus";
+  background: radial-gradient(circle, #DB9969, #69462E);
+}
+#earth {
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  animation:planetMove 16s linear infinite;
+}
+#earth:after {
+  top:200px;
+  left:200px;
+content:"earth";
+  background: radial-gradient(circle, #5DF505, #114FFA);
+}
+#mars {
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  animation:planetMove 20s linear infinite;
+}
+#mars:after {
+  top:250px;
+  left:250px;
+content:"mars";
+  background: radial-gradient(circle, #FA9911, #69410A);
+}
+#jupiter {
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  animation:planetMove 29s linear infinite;
+}
+#jupiter:after {
+  top:300px;
+content:"jupiter";
+  left:300px;
+  background: radial-gradient(circle, #917041, #5C421D);
+}
+#saturn {
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  animation:planetMove 35s linear infinite;
+}
+#saturn:after {
+  top:350px;
+  left:350px;
+content:"saturn";
+  background: radial-gradient(circle, #E08D19, #EBAC54);
+}
+#uranus {
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  animation:planetMove 40s linear infinite;
+}
+#uranus:after {
+  top:400px;
+  left:400px;
+content:"uranus";
+  background: radial-gradient(circle, #0780E3, #062C9C);
+}
+#neptune {
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  animation:planetMove 49s linear infinite;
+}
+#neptune:after {
+  top:450px;
+  left:450px;
+content:"neptune";
+  background: radial-gradient(circle, #0541F5, #4105F5);
+}
+
+#mercuryOrbit {
+  width: 140px;
+  height: 140px;
+  animation:spinnerRotate 4s linear infinite;
+	animation:spinnerRotate 4s linear infinite;
+}
+#venusOrbit {
+  width: 210px;
+  height: 210px;
+  animation:spinnerRotate 8s linear infinite;
+	animation:spinnerRotate 8s linear infinite;
+}
+#earthOrbit {
+  width: 280px;
+  height: 280px;
+  animation:spinnerRotate 16s linear infinite;
+	animation:spinnerRotate 16s linear infinite;
+}
+#marsOrbit {
+  width: 350px;
+  height: 350px;
+  animation:spinnerRotate 20s linear infinite;
+	animation:spinnerRotate 20s linear infinite;
+}
+#jupiterOrbit {
+  width: 420px;
+  height: 420px;
+  animation:spinnerRotate 29s linear infinite;
+	animation:spinnerRotate 29s linear infinite;
+}
+#saturnOrbit {
+  width: 490px;
+  height: 490px;
+  animation:spinnerRotate 35s linear infinite;
+	animation:spinnerRotate 35s linear infinite;
+}
+#uranusOrbit {
+  width: 560px;
+  height: 560px;
+  animation:spinnerRotate 40s linear infinite;
+	animation:spinnerRotate 40s linear infinite;
+}
+#neptuneOrbit {
+  width: 630px;
+  height: 630px;
+  animation:spinnerRotate 49s linear infinite;
+	animation:spinnerRotate 49s linear infinite;
+}
+
+
+
+
+
+@keyframes planetMove {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+@keyframes spinnerRotate {
+  from {transform : rotate(0deg)}
+  to {transform : rotate(0deg)}
+}
+body {
+  background-color:;
+}
+</style>
+<head>
+<body>
+
+
+
+<a  href="#neptune" target="_blank" ><div id='neptune' class='planet'></div></a>
+<div id='uranus' class='planet'></div>
+<div id='saturn' class='planet'></div>
+<div id='jupiter' class='planet'></div>
+<div id='mars' class='planet'></div>
+<div id='earth' class='planet'></div>
+<div id='venus' class='planet'></div>
+<div id='mercury' class='planet'></div>
+<div id='sun' class='star'></div>
+
+<div class='Orbit' id='mercuryOrbit'></div><br>
+<div class='Orbit' id='venusOrbit'></div>
+<div class='Orbit' id='earthOrbit'></div>
+<div class='Orbit' id='marsOrbit'></div>
+<div class='Orbit' id='jupiterOrbit'></div>
+<div class='Orbit' id='saturnOrbit'></div>
+<div class='Orbit' id='uranusOrbit'></div>
+<div class='Orbit' id='neptuneOrbit'></div>
+</body>
+</html>
